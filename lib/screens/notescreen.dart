@@ -15,6 +15,8 @@ class _NotesScreenState extends State<NotesScreen>
     with SingleTickerProviderStateMixin {
   int _selectedCategoryIndex = 0;
   TabController _tabController;
+  final DateFormat _dateFormat = DateFormat('dd mm');
+  final DateFormat _timeFormatter = DateFormat('hr min');
 
   @override
   void initState() {
@@ -106,7 +108,7 @@ class _NotesScreenState extends State<NotesScreen>
                   width: 20.0,
                 ),
                 Text(
-                  "RISHAB NAYAK",
+                  "SUMITVARUN",
                   style: TextStyle(
                     color: Color(0xff556465),
                     fontSize: 28.0,
@@ -175,6 +177,42 @@ class _NotesScreenState extends State<NotesScreen>
                     style:
                         TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
                   ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 30.0),
+            padding: EdgeInsets.all(30.0),
+            decoration: BoxDecoration(
+              color: Colors.deepOrange,
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      notes[0].title,
+                      style: TextStyle(
+                        color: Colors.black45,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      notes[0].title,
+                      style: TextStyle(
+                        color: Colors.black45,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
