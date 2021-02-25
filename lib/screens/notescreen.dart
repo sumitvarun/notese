@@ -91,6 +91,7 @@ class _NotesScreenState extends State<NotesScreen> {
                 Text(
                   "RISHAB NAYAK",
                   style: TextStyle(
+                    color: Color(0xff556465),
                     fontSize: 28.0,
                     fontWeight: FontWeight.bold,
                   ),
