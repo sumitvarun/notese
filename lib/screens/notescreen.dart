@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:notese/model/note_model.dart';
 
 class NotesScreen extends StatefulWidget {
   NotesScreen({Key key}) : super(key: key);
@@ -64,7 +65,6 @@ class _NotesScreenState extends State<NotesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var categories;
     return Scaffold(
       body: ListView(
         children: <Widget>[
@@ -115,7 +115,7 @@ class _NotesScreenState extends State<NotesScreen> {
                 return _buildCategoryCard(
                   index - 1,
                   categories.keys.toList()[index - 1],
-                  categories.value.toList()[index - 1],
+                  categories.values.toList()[index - 1],
                 );
               },
             ),
