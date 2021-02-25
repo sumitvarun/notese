@@ -41,9 +41,9 @@ class _NotesScreenState extends State<NotesScreen>
           boxShadow: [
             _selectedCategoryIndex == index
                 ? BoxShadow(
-                    color: Colors.black26,
+                    color: Color(0xff74F6FF),
                     offset: Offset(0, 2),
-                    blurRadius: 40.0)
+                    blurRadius: 15.0)
                 : BoxShadow(color: Colors.transparent)
           ],
         ),
