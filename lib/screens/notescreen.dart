@@ -21,8 +21,8 @@ class _NotesScreenState extends State<NotesScreen> {
       width: 175.0,
       decoration: BoxDecoration(
         color: _selectedCategoryIndex == index
-            ? Color(0xFF417BFB)
-            : Color(0xFF417BFB),
+            ? Color(0xFF22737D)
+            : Color(0xFF013837),
         borderRadius: BorderRadius.circular(20.0),
         boxShadow: [
           _selectedCategoryIndex == index
@@ -42,7 +42,7 @@ class _NotesScreenState extends State<NotesScreen> {
               style: TextStyle(
                   color: _selectedCategoryIndex == index
                       ? Colors.white
-                      : Color(0xffafb4c6)),
+                      : Color(0xff01FAF7)),
             ),
           ),
           Padding(
@@ -52,7 +52,7 @@ class _NotesScreenState extends State<NotesScreen> {
               style: TextStyle(
                 color: _selectedCategoryIndex == index
                     ? Colors.white
-                    : Colors.black,
+                    : Colors.white,
                 fontSize: 35.0,
                 fontWeight: FontWeight.bold,
               ),
