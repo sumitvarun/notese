@@ -11,13 +11,13 @@ class NotesScreen extends StatefulWidget {
   _NotesScreenState createState() => _NotesScreenState();
 }
 
-class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStateMixin{
+class _NotesScreenState extends State<NotesScreen>
+    with SingleTickerProviderStateMixin {
   int _selectedCategoryIndex = 0;
   TabController _tabController;
 
   @override
-  void @override
-  void initState() { 
+  void initState() {
     super.initState();
     _tabController = TabController(initialIndex: 0, length: 3, vsync: this);
   }
@@ -137,6 +137,34 @@ class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStat
                 );
               },
             ),
+          ),
+          TabBar(
+            controller: _tabController,
+            labelColor: Colors.black,
+            unselectedLabelColor: Colors.amberAccent,
+            indicatorColor: Colors.blue,
+            indicatorWeight: 4.0,
+            isScrollable: true,
+            tabs: <Widget>[
+              Tab(
+                child: Text(
+                  "Note",
+                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Tab(
+                child: Text(
+                  "Note",
+                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Tab(
+                child: Text(
+                  "Note",
+                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                ),
+              )
+            ],
           ),
         ],
       ),
