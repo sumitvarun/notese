@@ -15,8 +15,6 @@ class _NotesScreenState extends State<NotesScreen>
     with SingleTickerProviderStateMixin {
   int _selectedCategoryIndex = 0;
   TabController _tabController;
-  final DateFormat _dateFormat = DateFormat('dd mm');
-  final DateFormat _timeFormatter = DateFormat('hr min');
 
   @override
   void initState() {
@@ -205,7 +203,7 @@ class _NotesScreenState extends State<NotesScreen>
                       ),
                     ),
                     Text(
-                      notes[0].title,
+                      '21.45',
                       style: TextStyle(
                         color: Colors.black45,
                         fontSize: 18.0,
@@ -213,6 +211,17 @@ class _NotesScreenState extends State<NotesScreen>
                       ),
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Text(
+                  notes[0].content,
+                  style: TextStyle(
+                    color: Colors.black26,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w700,
+                  ),
                 )
               ],
             ),
