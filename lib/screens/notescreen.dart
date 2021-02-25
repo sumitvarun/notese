@@ -13,52 +13,62 @@ class NotesScreen extends StatefulWidget {
 
 class _NotesScreenState extends State<NotesScreen> {
   int _selectedCategoryIndex = 0;
+  TabController _tabController;
 
   Widget _buildCategoryCard(int index, String title, int count) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-      height: 240.0,
-      width: 175.0,
-      decoration: BoxDecoration(
-        color: _selectedCategoryIndex == index
-            ? Color(0xFF22737D)
-            : Color(0xFF013837),
-        borderRadius: BorderRadius.circular(20.0),
-        boxShadow: [
-          _selectedCategoryIndex == index
-              ? BoxShadow(
-                  color: Colors.black26, offset: Offset(0, 2), blurRadius: 10.0)
-              : BoxShadow(color: Colors.transparent)
-        ],
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Text(
-              title,
-              style: TextStyle(
-                  color: _selectedCategoryIndex == index
-                      ? Colors.white
-                      : Color(0xff01FAF7)),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Text(
-              count.toString(),
-              style: TextStyle(
-                color: _selectedCategoryIndex == index
-                    ? Colors.white
-                    : Colors.white,
-                fontSize: 35.0,
-                fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _selectedCategoryIndex = index;
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
+        height: 240.0,
+        width: 175.0,
+        decoration: BoxDecoration(
+          color: _selectedCategoryIndex == index
+              ? Color(0xFF22737D)
+              : Color(0xFF013837),
+          borderRadius: BorderRadius.circular(20.0),
+          boxShadow: [
+            _selectedCategoryIndex == index
+                ? BoxShadow(
+                    color: Colors.black26,
+                    offset: Offset(0, 2),
+                    blurRadius: 10.0)
+                : BoxShadow(color: Colors.transparent)
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text(
+                title,
+                style: TextStyle(
+                    color: _selectedCategoryIndex == index
+                        ? Colors.white
+                        : Color(0xff01FAF7)),
               ),
             ),
-          )
-        ],
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text(
+                count.toString(),
+                style: TextStyle(
+                  color: _selectedCategoryIndex == index
+                      ? Colors.white
+                      : Colors.white,
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
