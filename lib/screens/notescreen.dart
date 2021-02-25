@@ -20,7 +20,7 @@ class _NotesScreenState extends State<NotesScreen> {
             Container(
               height: 50.0, width: 50.0,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage('images\AvatarMaker (32).png'))
+                image: DecorationImage(image: AssetImage('lib\images\AvatarMaker (32).png'))
               ),
               ),
           ],),),
