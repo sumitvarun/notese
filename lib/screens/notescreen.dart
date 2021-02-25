@@ -11,9 +11,16 @@ class NotesScreen extends StatefulWidget {
   _NotesScreenState createState() => _NotesScreenState();
 }
 
-class _NotesScreenState extends State<NotesScreen> {
+class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStateMixin{
   int _selectedCategoryIndex = 0;
   TabController _tabController;
+
+  @override
+  void @override
+  void initState() { 
+    super.initState();
+    _tabController = TabController(initialIndex: 0, length: 3, vsync: this);
+  }
 
   Widget _buildCategoryCard(int index, String title, int count) {
     return GestureDetector(
