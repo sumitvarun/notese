@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notes_ui/screens/notes_screen.dart';
+import 'package:notese/screens/notescreen.dart';
 
 void main() => runApp(MyApp());
 
