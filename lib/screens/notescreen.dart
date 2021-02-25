@@ -19,7 +19,7 @@ class _NotesScreenState extends State<NotesScreen>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(initialIndex: 0, length: 3, vsync: this);
+    _tabController = TabController(initialIndex: 0, length: 4, vsync: this);
   }
 
   Widget _buildCategoryCard(int index, String title, int count) {
@@ -43,7 +43,7 @@ class _NotesScreenState extends State<NotesScreen>
                 ? BoxShadow(
                     color: Colors.black26,
                     offset: Offset(0, 2),
-                    blurRadius: 10.0)
+                    blurRadius: 40.0)
                 : BoxShadow(color: Colors.transparent)
           ],
         ),
@@ -138,33 +138,46 @@ class _NotesScreenState extends State<NotesScreen>
               },
             ),
           ),
-          TabBar(
-            controller: _tabController,
-            labelColor: Colors.black,
-            unselectedLabelColor: Colors.amberAccent,
-            indicatorColor: Colors.blue,
-            indicatorWeight: 4.0,
-            isScrollable: true,
-            tabs: <Widget>[
-              Tab(
-                child: Text(
-                  "Note",
-                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: TabBar(
+              controller: _tabController,
+              labelColor: Colors.blueGrey[900],
+              unselectedLabelColor: Colors.blueGrey[600],
+              indicatorColor: Colors.blueGrey[800],
+              indicatorWeight: 4.0,
+              isScrollable: true,
+              tabs: <Widget>[
+                Tab(
+                  child: Text(
+                    "Note",
+                    style:
+                        TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-              Tab(
-                child: Text(
-                  "Note",
-                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                Tab(
+                  child: Text(
+                    "Important",
+                    style:
+                        TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-              Tab(
-                child: Text(
-                  "Note",
-                  style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                Tab(
+                  child: Text(
+                    "Performed",
+                    style:
+                        TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                  ),
                 ),
-              )
-            ],
+                Tab(
+                  child: Text(
+                    "Work",
+                    style:
+                        TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
