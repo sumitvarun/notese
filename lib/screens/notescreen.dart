@@ -17,7 +17,12 @@ class _NotesScreenState extends State<NotesScreen> {
           Padding(padding: EdgeInsets.symmetric(horizontal: 30.0),
           child: Row(mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Container(height: 50.0, width: 50.0,)
+            Container(
+              height: 50.0, width: 50.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage('images\AvatarMaker (32).png'))
+              ),
+              ),
           ],),),
         ],
       ),
