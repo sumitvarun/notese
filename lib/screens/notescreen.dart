@@ -13,7 +13,7 @@ class NotesScreen extends StatefulWidget {
 class _NotesScreenState extends State<NotesScreen> {
   int _selectedCategoryIndex = 0;
 
-  Widget _buildCategoryCard(int index, String title, String content) {
+  Widget _buildCategoryCard(int index, String title, int count) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
       height: 240.0,
@@ -44,6 +44,19 @@ class _NotesScreenState extends State<NotesScreen> {
                       : Color(0xffafb4c6)),
             ),
           ),
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Text(
+              count.toString(),
+              style: TextStyle(
+                color: _selectedCategoryIndex == index
+                    ? Colors.white
+                    : Colors.black,
+                fontSize: 35.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          )
         ],
       ),
     );
@@ -51,6 +64,7 @@ class _NotesScreenState extends State<NotesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var categories;
     return Scaffold(
       body: ListView(
         children: <Widget>[
@@ -98,7 +112,6 @@ class _NotesScreenState extends State<NotesScreen> {
                     width: 20.0,
                   );
                 }
-                var categories;
                 return _buildCategoryCard(
                   index - 1,
                   categories.keys.toList()[index - 1],
