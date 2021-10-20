@@ -1,4 +1,7 @@
-
+[![GitHub issues](https://img.shields.io/github/issues/sumitvarun/notese)](https://github.com/sumitvarun/notese/issues)
+[![GitHub forks](https://img.shields.io/github/forks/sumitvarun/notese)](https://github.com/sumitvarun/notese/network)
+[![GitHub stars](https://img.shields.io/github/stars/sumitvarun/notese)](https://github.com/sumitvarun/notese/stargazers)
+[![GitHub license](https://img.shields.io/github/license/sumitvarun/notese)](https://github.com/sumitvarun/notese)
 <h1 align="center" >Notese</h1>
 
 
